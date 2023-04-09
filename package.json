@@ -15,9 +15,10 @@
     "test": "npm run typecheck && npm run prettier && npm run lint && npm run jest && npm run build"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@mantine/core": "6.0.0",
-    "@mantine/hooks": "6.0.0",
+    "@emotion/react": "^11.10.6",
+    "@mantine/core": "^6.0.4",
+    "@mantine/hooks": "^6.0.4",
+    "@tabler/icons-react": "^2.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -32,7 +33,7 @@
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "@typescript-eslint/parser": "^5.50.0",
     "@vitejs/plugin-react": "^3.1.0",
-    "eslint": "^8.33.0",
+    "eslint": "8.22.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-mantine": "2.0.0",
