@@ -1,6 +1,7 @@
-import { Button, Text, Title } from '@mantine/core';
+import { Anchor, Button, Container, Text, Title } from '@mantine/core';
 import { IconDownload } from '@tabler/icons-react';
 import { useStyles } from './useStyles';
+import Cv from '../../assets/HubertKarwowskiCV.pdf';
 
 export const Hero = () => {
     const {
@@ -9,9 +10,17 @@ export const Hero = () => {
 
     return (
         <div className={classes.hero}>
-            <Title order={1}>Hubert Karwowski</Title>
-            <Text size="xl">Front-End Developer</Text>
-            <Button variant="outline" mt={10} className={classes.cvButton}>Download CV <IconDownload /></Button>
+            <Container className={classes.container}>
+                <Title order={1} className={classes.title}>Hubert Karwowski</Title>
+                <Text size="xl" mt="md" className={classes.subtitle}>Passionate Front-End Developer who specialize in
+                    building websites using React Framework.
+                </Text>
+                <Anchor download="CV" href={Cv}>
+                    <Button mt="md" className={classes.cvButton} rightIcon={<IconDownload />}>Download
+                        CV
+                    </Button>
+                </Anchor>
+            </Container>
         </div>
     );
 };

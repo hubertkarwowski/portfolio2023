@@ -10,7 +10,6 @@ interface HeaderResponsiveProps {
 export function HeaderContent({ links }: HeaderResponsiveProps) {
     const [opened, {
         toggle,
-        close,
     }] = useDisclosure(false);
     const [active, setActive] = useState(links[0].link);
     const {
@@ -23,10 +22,8 @@ export function HeaderContent({ links }: HeaderResponsiveProps) {
           key={link.label}
           href={link.link}
           className={cx(classes.link, { [classes.linkActive]: active === link.link })}
-          onClick={(event) => {
-                event.preventDefault();
+          onClick={() => {
                 setActive(link.link);
-                close();
             }}
         >
             {link.label}

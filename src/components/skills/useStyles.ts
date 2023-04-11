@@ -4,5 +4,6 @@ export const useStyles = createStyles((theme) => ({
 
     container: {
         borderTop: `${theme.colors.dark[5]} 1px solid`,
+        width: '100%',
     },
 }));
