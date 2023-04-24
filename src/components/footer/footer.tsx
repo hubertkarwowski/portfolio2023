@@ -8,10 +8,10 @@ export const FooterLinks = () => {
     const dateNow = new Date().getFullYear();
 
     return (
-        <footer className={classes.footer}>
+        <footer className={classes.footer} id="contact-me">
             <Container className={classes.inner}>
                 <div className={classes.logo}>
-                    <Text>Logo</Text>
+                    <Text>HK</Text>
                     <Text size="xs" color="dimmed" className={classes.description}>
                         Passionate Front-End Developer
                     </Text>

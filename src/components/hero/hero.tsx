@@ -1,7 +1,8 @@
-import { Anchor, Button, Container, Text, Title } from '@mantine/core';
+import { Anchor, Button, Container, Image, Text, Title } from '@mantine/core';
 import { IconDownload } from '@tabler/icons-react';
 import { useStyles } from './useStyles';
 import Cv from '../../assets/HubertKarwowskiCV.pdf';
+import heroImage from '../../assets/hero.png';
 
 export const Hero = () => {
     const {
@@ -20,6 +21,9 @@ export const Hero = () => {
                         CV
                     </Button>
                 </Anchor>
+            </Container>
+            <Container className={classes.heroImageContainer}>
+                <Image src={heroImage} alt="Coder Image" className={classes.heroImage} />
             </Container>
         </div>
     );

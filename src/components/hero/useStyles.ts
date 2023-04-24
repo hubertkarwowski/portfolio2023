@@ -3,7 +3,17 @@ import { createStyles, keyframes, rem } from '@mantine/core';
 const scroll = keyframes({
     '0%': { backgroundPosition: '-500px -30px' },
     '100%': { backgroundPosition: '500px 1050px' },
-
+});
+const upDown = keyframes({
+    '0%': {
+        transform: 'translateY(-0)',
+    },
+    '50%': {
+        transform: 'translateY(-25px)',
+    },
+    '100%': {
+        transform: 'translateY(0)',
+    },
 });
 
 export const useStyles = createStyles((theme) => ({
@@ -15,8 +25,26 @@ export const useStyles = createStyles((theme) => ({
         width: '100%',
         padding: '0',
         margin: '0',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
 
         animation: `${scroll} 60s linear infinite`,
+
+        [theme.fn.smallerThan('xs')]: {
+            flexDirection: 'column',
+            justifyContent: 'center',
+        },
+    },
+
+    heroImageContainer: {
+        position: 'relative',
+        width: '100%',
+    },
+
+    heroImage: {
+        animation: `${upDown} 5s  infinite`,
+        animationTimingFunction: 'ease-in-out',
 
     },
 
@@ -65,6 +93,10 @@ export const useStyles = createStyles((theme) => ({
         width: '45ch',
         [theme.fn.smallerThan('sm')]: {
             width: '100%',
+        },
+        [theme.fn.smallerThan('md')]: {
+            width: '25ch',
+
         },
     },
 }));

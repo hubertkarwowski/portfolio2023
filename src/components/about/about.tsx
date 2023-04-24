@@ -8,7 +8,6 @@ interface Props {
         text: string,
         date: string,
         company: string,
-        link: { url: string, text: string }
     }
 }
 
