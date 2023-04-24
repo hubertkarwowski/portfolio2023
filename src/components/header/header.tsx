@@ -33,7 +33,7 @@ export function HeaderContent({ links }: HeaderResponsiveProps) {
     return (
         <Header height={rem(60)} mb={120} className={classes.root}>
             <Container className={classes.header}>
-                <h3>LOGO</h3>
+                <h3>HK</h3>
                 <Group spacing={5} className={classes.links}>
                     {items}
                 </Group>
